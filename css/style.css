@@ -1,3 +1,72 @@
-body{
+.background {
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 140, 126, 1) 0%,
+    rgba(18, 140, 126, 1) 15%,
+    rgba(219, 219, 210, 1) 15%
+  );
+}
+
+.app-window {
+  height: 90vh;
   background-color: red;
+  border-radius: 20px;
+}
+
+.top-left-radius {
+  border-top-left-radius: 20px;
+}
+
+/************************************ LEFT SIDE ************************************/
+
+.user-profile {
+  border-right: 1px solid #919191;
+  padding: 10px 16px;
+  background-color: #ededed;
+  height: 60px;
+}
+
+.profile-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.chat,
+.unread,
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+
+/************************************ NOTIFICATION ************************************/
+.notification {
+  background-color: #9de1fe;
+}
+
+/************************************ SEARCH BAR ************************************/
+.search-row {
+  background-color: #ededed;
+}
+
+.search-bar {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+/************************************ CHATS ************************************/
+.chats {
+  border-bottom-left-radius: 20px;
+  background-color: #fff;
+  height: 1000px;
+}
+
+/************************************ LEFT SIDE ************************************/
+.header {
+  background-color: #ededed;
+  height: 60px;
+  border-top-right-radius: 20px;
 }
