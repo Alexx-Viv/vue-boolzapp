@@ -9,9 +9,10 @@
 }
 
 .app-window {
-  height: 90vh;
   background-color: red;
   border-radius: 20px;
+  height: calc(100% - 38px);
+  border-bottom-left-radius: 20px;
 }
 
 .top-left-radius {
@@ -53,20 +54,75 @@
 }
 
 .search-bar {
+  padding: 5px;
   background-color: #fff;
   border-radius: 20px;
 }
 
 /************************************ CHATS ************************************/
 .chats {
-  border-bottom-left-radius: 20px;
   background-color: #fff;
-  height: 1000px;
+  height: 1003px;
+  overflow-y: auto;
+  border-bottom-left-radius: 20px;
 }
 
-/************************************ LEFT SIDE ************************************/
+.contact-profile {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.contact-name {
+  padding-left: 20px;
+}
+
+.contact-side {
+  border-bottom: 1px solid #ededed;
+}
+
+/************************************ HEADER ************************************/
 .header {
   background-color: #ededed;
   height: 60px;
   border-top-right-radius: 20px;
+}
+/************************************ MAIN ************************************/
+.main-chat {
+  background-image: url('../img/mine.jpg');
+  background-size: contain;
+  height: 80vh;
+}
+
+/************************************ FOOTER ************************************/
+
+.footer {
+  background-color: #ededed;
+  border-bottom-right-radius: 20px;
+}
+
+.form-control {
+  border-radius: 30px;
+}
+
+.clip {
+  padding-left: 10px;
+}
+
+.user-message {
+  width: 100%;
+}
+
+/************************************ MESSAGE CHAT ************************************/
+.sms {
+  padding: 10px 20px;
+  max-width: 450px;
+  display: inline-block;
+  background-color: #919191;
+  border-radius: 20px;
+  word-wrap: break-word;
+}
+
+.user-sms {
+  background-color: lightgreen;
 }
