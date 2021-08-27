@@ -62,7 +62,7 @@
 /************************************ CHATS ************************************/
 .chats {
   background-color: #fff;
-  height: 1003px;
+  height: calc(100% - 190px);
   overflow-y: auto;
   border-bottom-left-radius: 20px;
 }
