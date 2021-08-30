@@ -12,6 +12,7 @@ body {
 
 #app .container {
   height: 90%;
+  border-radius: 16px;
 }
 
 i:hover {
@@ -88,6 +89,10 @@ li.media:hover {
 #chat footer,
 .user-section {
   height: 70px;
+}
+
+#chat header {
+  border-left: 1px solid lightgray;
 }
 
 .user-section i {
