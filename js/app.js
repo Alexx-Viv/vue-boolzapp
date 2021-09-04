@@ -5,6 +5,7 @@ const app = new Vue({
   data: {
     user,
     contacts,
+    data,
   },
   methods: {},
 });
