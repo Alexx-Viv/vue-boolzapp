@@ -6,6 +6,7 @@ const app = new Vue({
     user,
     contacts,
     data,
+    displayContact: [],
     contactImage: '../img/avatar_1.jpg',
     contactName: 'Michele',
     contactIndex: 0,
@@ -18,6 +19,7 @@ const app = new Vue({
       this.contactName = name;
       this.contactImage = '.' + image;
       this.contactIndex = index;
+      console.log(index);
     },
     addMessage(userMessage, contactIndex) {
       const today = new Date();
@@ -51,5 +53,23 @@ const app = new Vue({
         this.data.contacts[contactIndex].messages.push(newMessage);
       }, 1000);
     },
+    test() {
+      this.displayContact = [];
+
+      for (let i = 0; i < this.contacts.length; i++) {
+        if (
+          this.contacts[i].name
+            .toLowerCase()
+            .includes(this.searchContact.toLowerCase().trim())
+        ) {
+          this.displayContact.push(this.contacts[i]);
+        }
+      }
+
+      console.log(this.displayContact);
+    },
+  },
+  created() {
+    this.displayContact = this.contacts;
   },
 });

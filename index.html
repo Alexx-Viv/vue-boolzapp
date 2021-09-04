@@ -55,17 +55,18 @@
           <!-- Search section -->
           <section class="search p-2">
             <i class="fas fa-search text-muted"></i>
-            <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat...">
+            <input type="text" v-model="searchContact" v-on:keyup="test()" class="w-100"
+              placeholder="Cerca o inizia una nuova chat...">
           </section>
           <!-- Users list -->
           <section class="flex-grow-1 overflow-auto bg-white">
             <ul class="m-0 p-0">
-              <li class="media" v-for="(contact, index) in contacts"
-                @click="changeContact(contacts[index].name, `./img/avatar${contacts[index].avatar}.jpg`, index)">
+              <li class="media" v-for="(contact, index) in displayContact"
+                @click="changeContact(displayContact[index].name, `./img/avatar${displayContact[index].avatar}.jpg`, index)">
                 <figure>
-                  <img :src="`./img/avatar${contacts[index].avatar}.jpg`" alt="Marco Lanci">
+                  <img :src="`./img/avatar${displayContact[index].avatar}.jpg`" :alt="displayContact[index].name">
                 </figure>
-                <div class="h6 media-text">{{contacts[index].name}}</div>
+                <div class="h6 media-text">{{displayContact[index].name}}</div>
               </li>
             </ul>
           </section>
