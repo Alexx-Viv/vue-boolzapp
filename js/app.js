@@ -41,6 +41,15 @@ const app = new Vue({
       this.data.contacts[contactIndex].messages.push(newMessage);
 
       this.userMessage = '';
+
+      setTimeout(() => {
+        const newMessage = {
+          date: this.timestamp,
+          message: 'ok',
+          status: 'received',
+        };
+        this.data.contacts[contactIndex].messages.push(newMessage);
+      }, 1000);
     },
   },
 });
