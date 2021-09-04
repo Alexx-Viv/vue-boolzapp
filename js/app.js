@@ -6,6 +6,13 @@ const app = new Vue({
     user,
     contacts,
     data,
+    contactImage: '../img/avatar_3.jpg',
+    contactName: 'Samuele',
   },
-  methods: {},
+  methods: {
+    changeContact(name, image) {
+      this.contactName = name;
+      this.contactImage = '.' + image;
+    },
+  },
 });
