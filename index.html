@@ -103,14 +103,15 @@
               </li>
             </ul>
           </main>
-          <!-- CHAT MESSAGS TYPING -->
+          <!-- CHAT MESSAGES TYPING -->
           <footer class="flex-shrink-0 container-fluid">
             <div class="row h-100 align-items-center">
               <div class="col-1">
                 <i class="fas fa-smile fa-2x text-muted clickable"></i>
               </div>
               <div class="col-10">
-                <input type="text" class="form-control border-0" placeholder="Scrivi un messaggio">
+                <input type="text" v-model="userMessage" class="form-control border-0" placeholder="Scrivi un messaggio"
+                  v-on:keyup.enter="addMessage(userMessage, contactIndex)">
               </div>
               <div class="col-1">
                 <i class="fas fa-microphone fa-2x text-muted clickable"></i>
