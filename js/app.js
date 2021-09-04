@@ -6,13 +6,15 @@ const app = new Vue({
     user,
     contacts,
     data,
-    contactImage: '../img/avatar_3.jpg',
-    contactName: 'Samuele',
+    contactImage: '../img/avatar_1.jpg',
+    contactName: 'Michele',
+    contactIndex: 0,
   },
   methods: {
-    changeContact(name, image) {
+    changeContact(name, image, index) {
       this.contactName = name;
       this.contactImage = '.' + image;
+      this.contactIndex = index;
     },
   },
 });

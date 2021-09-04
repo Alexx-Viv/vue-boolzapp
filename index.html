@@ -61,7 +61,7 @@
           <section class="flex-grow-1 overflow-auto bg-white">
             <ul class="m-0 p-0">
               <li class="media" v-for="(contact, index) in contacts"
-                @click="changeContact(contacts[index].name, `./img/avatar${contacts[index].avatar}.jpg`)">
+                @click="changeContact(contacts[index].name, `./img/avatar${contacts[index].avatar}.jpg`, index)">
                 <figure>
                   <img :src="`./img/avatar${contacts[index].avatar}.jpg`" alt="Marco Lanci">
                 </figure>
@@ -94,11 +94,11 @@
           <!-- CHAT MESSAGES -->
           <main class="flex-grow-1 overflow-auto bg-chat-image">
             <ul>
-              <li class="message-container p-3" :class="data.contacts[0].messages[index].status"
-                v-for="(message, index) in data.contacts[0].messages">
+              <li class="message-container p-3" :class="data.contacts[contactIndex].messages[index].status"
+                v-for="(message, index) in data.contacts[contactIndex].messages">
                 <div class="message p-2 rounded-3">
-                  <p>{{data.contacts[0].messages[index].message}}</p>
-                  <time datetime="2021-08-03T09:53">Hai {{data.contacts[0].messages[index].date}}</time>
+                  <p>{{data.contacts[contactIndex].messages[index].message}}</p>
+                  <time datetime="2021-08-03T09:53">Hai {{data.contacts[contactIndex].messages[index].date}}</time>
                 </div>
               </li>
             </ul>
