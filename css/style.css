@@ -127,3 +127,35 @@ li.media:hover {
   padding-left: 50px;
   border-radius: 20px;
 }
+
+/***** MESSAGE SECTION *****/
+.message-container {
+  display: flex;
+}
+
+.message-container.sent {
+  justify-content: flex-end;
+}
+
+.message-container.received {
+  justify-content: flex-start;
+}
+
+.message-container.sent .message {
+  background-color: #d5f9ba;
+}
+
+.message-container.received .message {
+  background-color: #ffffff;
+}
+
+.message-container .message p {
+  margin-bottom: 0;
+}
+
+.message-container .message time {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  color: #aaaaaa;
+}

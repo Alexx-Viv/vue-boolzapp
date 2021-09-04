@@ -59,11 +59,12 @@
           <!-- Users list -->
           <section class="flex-grow-1 overflow-auto bg-white">
             <ul class="m-0 p-0">
-              <li class="media">
+              <li class="media" v-for="(contact, index) in contacts"
+                @click="changeContact(contacts[index].name, `./img/avatar${contacts[index].avatar}.jpg`)">
                 <figure>
-                  <img src="./img/avatar_2.jpg" alt="Marco Lanci">
+                  <img :src="`./img/avatar${contacts[index].avatar}.jpg`" alt="Marco Lanci">
                 </figure>
-                <div class="h6 media-text">Marco Lanci</div>
+                <div class="h6 media-text">{{contacts[index].name}}</div>
               </li>
             </ul>
           </section>
@@ -90,7 +91,22 @@
             </div>
           </header>
           <!-- CHAT MESSAGES -->
-          <main class="flex-grow-1 overflow-auto bg-chat-image">messages</main>
+          <main class="flex-grow-1 overflow-auto bg-chat-image">
+            <ul>
+              <li class="message-container p-3 sent">
+                <div class="message p-2 rounded-3">
+                  <p>Hai portato fuori il cane?</p>
+                  <time datetime="2021-08-03T09:53">10/01/2020 - 09:53</time>
+                </div>
+              </li>
+              <li class="message-container p-3 received">
+                <div class="message p-2 rounded-3">
+                  <p>Sì!</p>
+                  <time datetime="2021-08-03T09:53">10/01/2020 - 10:07</time>
+                </div>
+              </li>
+            </ul>
+          </main>
           <!-- CHAT MESSAGS TYPING -->
           <footer class="flex-shrink-0 container-fluid">
             <div class="row h-100 align-items-center">
@@ -109,6 +125,7 @@
       </div>
     </div>
   </div>
+  <script src="./js/users.js"></script>
   <script src="./js/app.js"></script>
 </body>
 
